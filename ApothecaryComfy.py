@@ -44,9 +44,9 @@ class ApothecaryComfy:
             PYTHON,
             str(path_to_comfy_exec),
             "--input_directory",
-            input_dir,
+            str(input_dir),
             "--output_directory",
-            output_dir,
+            str(output_dir),
             "--disable-metadata"
         ]
 
