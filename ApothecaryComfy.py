@@ -43,9 +43,9 @@ class ApothecaryComfy:
         run_cmd = [
             PYTHON,
             str(path_to_comfy_exec),
-            "--input_directory",
+            "--input-directory",
             str(input_dir),
-            "--output_directory",
+            "--output-directory",
             str(output_dir),
             "--disable-metadata"
         ]
