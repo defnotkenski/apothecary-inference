@@ -51,7 +51,7 @@ class ApothecaryComfy:
         ]
 
         log.info(f"Executing command: {run_cmd}")
-        server_process = subprocess.Popen(run_cmd, shell=True)
+        server_process = subprocess.Popen(run_cmd)
         server_process.wait()
 
         return
