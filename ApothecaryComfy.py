@@ -39,7 +39,7 @@ class ApothecaryComfy:
     def run_server(self, input_dir: str, output_dir: str) -> None:
         # Run Comfy on the seperate thread.
 
-        path_to_comfy_exec = Path.cwd().joinpath("ComfyUI", "main1s.py")
+        path_to_comfy_exec = Path.cwd().joinpath("ComfyUI", "main.py")
         run_cmd = [
             PYTHON,
             str(path_to_comfy_exec),
