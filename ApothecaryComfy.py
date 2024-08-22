@@ -29,7 +29,7 @@ class ApothecaryComfy:
             if time.time() - start_time > 60:
                 raise TimeoutError("Server did not start within 60 seconds.")
 
-            time.sleep(0.5)
+            time.sleep(1)
 
         elapsed_time = time.time() - start_time
         log.info(f"Server started in {elapsed_time}.")
@@ -59,6 +59,8 @@ class ApothecaryComfy:
     def is_server_running(self) -> bool:
         try:
             with request.urlopen(f"http://{self.server_address}/history/123") as url_response:
+                log.info(url_response)
+
                 return url_response.status == 200
         except URLError as e:
             log.error(f"Error checking to see if server is running: {e}")
