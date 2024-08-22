@@ -32,7 +32,7 @@ class ApothecaryComfy:
             time.sleep(1)
 
         elapsed_time = time.time() - start_time
-        log.info(f"Server started in {elapsed_time}.")
+        log.info(f"Server started in {round(elapsed_time, 2)} seconds.")
 
         return
 
