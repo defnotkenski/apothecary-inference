@@ -35,6 +35,6 @@ def setup_logger() -> logging.Logger:
         logger.handlers.clear()
 
     logger.addHandler(rh)
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     return logger

@@ -59,9 +59,9 @@ class ApothecaryComfy:
     def is_server_running(self) -> bool:
         try:
             with request.urlopen(f"http://{self.server_address}") as url_response:
-                log.info(url_response)
+                log.info(url_response.status)
 
                 return url_response.status == 200
         except URLError as e:
-            log.error(f"Error checking to see if server is running: {e}")
+            log.debug(f"Error checking to see if server is running: {e}")
             return False
