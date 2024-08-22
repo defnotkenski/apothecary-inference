@@ -58,7 +58,7 @@ class ApothecaryComfy:
 
     def is_server_running(self) -> bool:
         try:
-            with request.urlopen(f"http://{self.server_address}/history/123") as url_response:
+            with request.urlopen(f"http://{self.server_address}") as url_response:
                 log.info(url_response)
 
                 return url_response.status == 200
